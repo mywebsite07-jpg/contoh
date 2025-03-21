@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My BioLink</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gradient-to-r from-gray-900 to-gray-700 text-white text-center flex items-center justify-center min-h-screen p-6">
+    <div class="max-w-md mx-auto bg-white bg-opacity-10 p-6 rounded-lg shadow-lg" id="mainMenu">
+        <div class="flex flex-col items-center">
+            <img src="https://files.catbox.moe/0pty3z.jpg" alt="Foto Profil" class="w-24 h-24 rounded-full border-4 border-blue-500">
+            <h2 class="text-2xl font-bold mt-2 flex items-center gap-2">AP<i class="fas fa-check-circle text-blue-500"></i></h2>
+            <p class="mt-2">"web ini hanya untuk contoh saja "</p>
+        </div>
+        <div class="mt-4 space-y-3">
+            <a href="https://www.instagram.com/randomshare07?igsh=MTd6aXVsNjFrOHNlaA==" class="flex items-center justify-center gap-3 w-full py-3 bg-white bg-opacity-20 rounded-lg text-lg hover:bg-opacity-40 transition">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://github.com/AP-update?tab=repositories" class="flex items-center justify-center gap-3 w-full py-3 bg-white bg-opacity-20 rounded-lg text-lg hover:bg-opacity-40 transition">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://wa.me/6283174860968" class="flex items-center justify-center gap-3 w-full py-3 bg-white bg-opacity-20 rounded-lg text-lg hover:bg-opacity-40 transition">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://whatsapp.com/channel/0029VaalShkGZNCsXgFPO80A" class="flex items-center justify-center gap-3 w-full py-3 bg-white bg-opacity-20 rounded-lg text-lg hover:bg-opacity-40 transition">
+                <i class="fas fa-bullhorn"></i> Channel WhatsApp
+            </a>
+            <a href="#" class="flex items-center justify-center gap-3 w-full py-3 bg-white bg-opacity-20 rounded-lg text-lg hover:bg-opacity-40 transition" onclick="showWebsitePage()">
+                <i class="fas fa-globe"></i> Website saya
+            </a>
+            <button class="w-full py-3 bg-red-500 rounded-lg text-lg hover:bg-red-600 transition" onclick="showMusicPage()"> Playlist</button>
+        </div>
+    </div>
+
+    <div class="max-w-md mx-auto bg-white bg-opacity-10 p-6 rounded-lg shadow-lg hidden" id="websitePage">
+        <h2 class="text-2xl font-bold">Website saya</h2>
+        <p class="mt-2">Jelajahi berbagai kategori yang tersedia di website saya!</p>
+        
+        <div class="mt-4 space-y-3">
+            <a href="https://luniaai.my.id" class="flex items-center justify-center gap-3 w-full py-3 bg-white bg-opacity-20 rounded-lg text-lg hover:bg-opacity-40 transition">
+                https://luniaai.my.id
+            </a>
+           
+            <a href="https://bratstick.web.id" class="flex items-center justify-center gap-3 w-full py-3 bg-white bg-opacity-20 rounded-lg text-lg hover:bg-opacity-40 transition">
+             https://bratstick.web.id
+            </a>
+            </a>
+        </div>
+
+        <button class="w-full mt-4 py-3 bg-red-500 rounded-lg text-lg hover:bg-red-600 transition" onclick="showMainMenu()"> Menu Utama</button>
+    </div>
+
+<div class="max-w-md mx-auto bg-white bg-opacity-10 p-6 rounded-lg shadow-lg hidden" id="musicPage">
+    <h2 class="text-2xl font-bold">Playlist</h2>
+    <div class="mt-4 space-y-4">
+        <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio1', 'btn1')">
+                <p class="text-lg font-semibold">Tombo Ati</p>
+                <p class="text-sm text-gray-300">Opick</p>
+            </div>
+            <button id="btn1" onclick="togglePlay('audio1', 'btn1')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio1" src="https://files.catbox.moe/tq8wxw.mp3"></audio>
+        </div>
+    
+        <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio2', 'btn2')">
+                <p class="text-lg font-semibold">Dear god</p>
+                <p class="text-sm text-gray-300">Avenged Sevenfold</p>
+            </div>
+            <button id="btn2" onclick="togglePlay('audio2', 'btn2')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio2" src="https://files.catbox.moe/5kntgn.mp3"></audio>
+        </div>
+        
+               <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio2', 'btn2')">
+                <p class="text-lg font-semibold">Dear god (outro)</p>
+                <p class="text-sm text-gray-300">Avebged Sevenfold</p>
+            </div>
+            <button id="btn3" onclick="togglePlay('audio3', 'btn3')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio3" src="https://files.catbox.moe/18eutw.mp3"></audio>
+        </div>
+        
+               <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio4', 'btn4')">
+                <p class="text-lg font-semibold">Afterlife</p>
+                <p class="text-sm text-gray-300">Avenged Sevenfold</p>
+            </div>
+            <button id="btn4" onclick="togglePlay('audio4', 'btn4')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio4" src="https://files.catbox.moe/091gir.mp3"></audio>
+        </div>
+        
+        <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio5', 'btn5')">
+                <p class="text-lg font-semibold">Remenissions</p>
+                <p class="text-sm text-gray-300">Avenged Sevenfold</p>
+            </div>
+            <button id="btn5" onclick="togglePlay('audio5', 'btn5')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio5" src="https://files.catbox.moe/gqk5e5.mp3"></audio>
+        </div>
+        
+        <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio6', 'btn6')">
+                <p class="text-lg font-semibold">Unbound</p>
+                <p class="text-sm text-gray-300">Avenged Sevenfold</p>
+            </div>
+            <button id="btn6" onclick="togglePlay('audio6', 'btn6')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio6" src="https://files.catbox.moe/b7grr4.mp3"></audio>
+        </div>
+        
+       <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio7', 'btn7')">
+                <p class="text-lg font-semibold">Until the end</p>
+                <p class="text-sm text-gray-300">Avenged Sevenfold</p>
+            </div>
+            <button id="btn7" onclick="togglePlay('audio7', 'btn7')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio7" src="https://files.catbox.moe/efposx.mp3"></audio>
+        </div>
+ 
+ <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio8', 'btn8')">
+                <p class="text-lg font-semibold">Bat Country</p>
+                <p class="text-sm text-gray-300">Avenged Sevenfold</p>
+            </div>
+            <button id="btn8" onclick="togglePlay('audio8', 'btn8')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio8" src="https://files.catbox.moe/lqht9d.mp3"></audio>
+        </div>
+        
+        <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio9', 'btn9')">
+                <p class="text-lg font-semibold">Given up</p>
+                <p class="text-sm text-gray-300">Linkin Park</p>
+            </div>
+            <button id="btn9" onclick="togglePlay('audio9', 'btn9')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio9" src="https://files.catbox.moe/3nuj2q.mp3"></audio>
+        </div>
+        
+        <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio10', 'btn10')">
+                <p class="text-lg font-semibold">A Place For My Head</p>
+                <p class="text-sm text-gray-300">Linkin Park</p>
+            </div>
+            <button id="btn10" onclick="togglePlay('audio10', 'btn10')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio10" src="https://files.catbox.moe/3nuj2q.mp3"></audio>
+        </div>
+        
+        <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio4', 'btn4')">
+                <p class="text-lg font-semibold">The Emptiness Machine</p>
+                <p class="text-sm text-gray-300">Linkin Park</p>
+            </div>
+            <button id="btn11" onclick="togglePlay('audio11', 'btn11')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio11" src="https://files.catbox.moe/9z1ok5.mp3"></audio>
+        </div>
+        
+        <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio4', 'btn4')">
+                <p class="text-lg font-semibold">Somewhere I belong</p>
+                <p class="text-sm text-gray-300">Linkin Park</p>
+            </div>
+            <button id="btn12" onclick="togglePlay('audio12', 'btn12')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio12" src="https://files.catbox.moe/o63st8.mp3"></audio>
+        </div>
+        
+        <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio13', 'btn13')">
+                <p class="text-lg font-semibold">Bocah Ngapa Yak</p>
+                <p class="text-sm text-gray-300">Wali</p>
+            </div>
+            <button id="btn13" onclick="togglePlay('audio13', 'btn13')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio13" src="https://files.catbox.moe/mq65hk.mp3"></audio>
+        </div>
+        
+        <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio14', 'btn14')">
+                <p class="text-lg font-semibold">Dengarlah Bintang Hatiku</p>
+                <p class="text-sm text-gray-300">Demeises</p>
+            </div>
+            <button id="btn14" onclick="togglePlay('audio14', 'btn14')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio14" src="https://files.catbox.moe/psxyk4.mp3"></audio>
+        </div>
+        
+        <div class="bg-white bg-opacity-20 p-4 rounded-lg flex items-center justify-between">
+            <div class="cursor-pointer" onclick="togglePlay('audio15', 'btn15')">
+                <p class="text-lg font-semibold">Forever & One</p>
+                <p class="text-sm text-gray-300">Helloween</p>
+            </div>
+            <button id="btn15" onclick="togglePlay('audio15', 'btn15')" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full ml-8">
+                <i class="fas fa-play"></i>
+            </button>
+            <audio id="audio15" src="https://files.catbox.moe/0va0x3.mp3"></audio>
+        </div>
+        
+    </div>
+    <button class="w-full mt-4 py-3 bg-red-500 rounded-lg text-lg hover:bg-red-600 transition" onclick="showMainMenu()"> Menu Utama</button>
+</div>
+<script>
+    function showMusicPage() {
+        document.getElementById("mainMenu").classList.add("hidden");
+        document.getElementById("musicPage").classList.remove("hidden");
+    }
+    function showWebsitePage() {
+        document.getElementById("mainMenu").classList.add("hidden");
+        document.getElementById("websitePage").classList.remove("hidden");
+    }
+    function showMainMenu() {
+        document.getElementById("musicPage").classList.add("hidden");
+        document.getElementById("websitePage").classList.add("hidden");
+        document.getElementById("mainMenu").classList.remove("hidden");
+    }
+    function togglePlay(audioId, btnId) {
+        let audio = document.getElementById(audioId);
+        let button = document.getElementById(btnId);
+        if (audio.paused) {
+            audio.play();
+            button.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+            audio.pause();
+            button.innerHTML = '<i class="fas fa-play"></i>';
+        }
+    }
+</script>
+
+</body>
+</html>
